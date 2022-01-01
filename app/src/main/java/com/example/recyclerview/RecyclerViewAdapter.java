@@ -1,5 +1,7 @@
 package com.example.recyclerview;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,14 +11,17 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapter.RecyclerViewViewHolder> {
-    private ArrayList<RecyclerViewItem> arrayList;
+    private ArrayList<RecyclerViewItem> recipesArrayList;
+    Context context;
 
     @NonNull
     @Override
-    public RecyclerViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public RecyclerViewAdapter.RecyclerViewViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_view_item, parent, false);
         RecyclerViewViewHolder recyclerViewViewHolder = new RecyclerViewViewHolder(view);
         return recyclerViewViewHolder;
@@ -24,32 +29,55 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     @Override
     public void onBindViewHolder(@NonNull RecyclerViewViewHolder recyclerViewViewHolder, int position) {
-        RecyclerViewItem recyclerViewItem = arrayList.get(position);
+        RecyclerViewItem recyclerViewItem = recipesArrayList.get(position);
 
-        recyclerViewViewHolder.imageView.setImageResource(recyclerViewItem.getImageResource());
-        recyclerViewViewHolder.textView1.setText(recyclerViewItem.getText1());
-        recyclerViewViewHolder.textView2.setText(recyclerViewItem.getText2());
+        recyclerViewViewHolder.pizzaImageView.setImageResource(recyclerViewItem.getImageResource());
+        recyclerViewViewHolder.titleTextView.setText(recyclerViewItem.getTitle());
+        recyclerViewViewHolder.descriptionTextView.setText(recyclerViewItem.getDescription());
+       /* recyclerViewViewHolder.ingredientsTextView.setText(recyclerViewItem.getIngredients());
+        recyclerViewViewHolder.methodTextView.setText(recyclerViewItem.getMethod());*/
     }
 
     @Override
     public int getItemCount() {
-        return arrayList.size();
+        return recipesArrayList.size();
     }
 
-    public static class RecyclerViewViewHolder extends RecyclerView.ViewHolder {
-        public ImageView imageView;
-        public TextView textView1;
-        public TextView textView2;
+    class RecyclerViewViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+        public ImageView pizzaImageView;
+        public TextView titleTextView;
+        public TextView descriptionTextView;
+        /*public TextView ingredientsTextView;
+        public TextView methodTextView;*/
 
         public RecyclerViewViewHolder(@NonNull View itemView) {
             super(itemView);
-            imageView = itemView.findViewById(R.id.imageView);
-            textView1 = itemView.findViewById(R.id.textView1);
-            textView2 = itemView.findViewById(R.id.textView2);
+            itemView.setOnClickListener(this);
+
+            pizzaImageView = itemView.findViewById(R.id.pizzaImageView);
+            titleTextView = itemView.findViewById(R.id.titleTextView);
+            descriptionTextView = itemView.findViewById(R.id.descriptionTextView);
+            /*ingredientsTextView = itemView.findViewById(R.id.ingredientsTextView);
+            methodTextView = itemView.findViewById(R.id.methodTextView);*/
+        }
+
+        @Override
+        public void onClick(View view) {
+            int position = getAdapterPosition();
+            RecyclerViewItem recipe = recipesArrayList.get(position);
+
+            Intent intent = new Intent(context, PizzaRecipe.class);
+            intent.putExtra("imageResource", recipe.getImageResource());
+            intent.putExtra("title", recipe.getTitle());
+            intent.putExtra("description", recipe.getDescription());
+            intent.putExtra("ingredients", recipe.getIngredients());
+            intent.putExtra("method", recipe.getMethod());
+            context.startActivity(intent);
         }
     }
 
-    public RecyclerViewAdapter(ArrayList<RecyclerViewItem> arrayList) {
-        this.arrayList = arrayList;
+    public RecyclerViewAdapter(ArrayList<RecyclerViewItem> RecipesArrayList, Context context) {
+        this.recipesArrayList = RecipesArrayList;
+        this.context = context;
     }
 }

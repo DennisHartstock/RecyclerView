@@ -1,3 +1,101 @@
 <resources>
-    <string name="app_name">RecyclerView</string>
+    <string name="app_name">Pizza Recipes</string>
+    <string name="homemade_title">Pizza with homemade sauce</string>
+    <string name="homemade_description">Make pizza for the family with a homemade base and tomato sauce.
+        The recipe is perfect to get kids involved in cooking. Top with mozzarella and fresh basil</string>
+    <string name="homemade_method">Method
+STEP 1
+Tip the flour into a bowl, then stir in the yeast and 1 tsp salt.
+        Make a well in the centre and pour in 200ml warm water (make sure it’s not too hot) along with the oil.
+        Stir together with a wooden spoon until you have a soft, fairly wet dough.
+
+STEP 2
+Tip the dough out onto a lightly floured surface and knead for 5 mins until smooth.
+        Cover with a tea towel and set aside for an hour or so or until the dough has puffed up and doubled in size.
+        You can also leave the rough, unkneaded dough in the bowl,
+        cover with a tea towel and leave in the fridge overnight and the dough will continue to prove on its own.
+
+STEP 3
+Meanwhile, make the tomato sauce. Put the oil in a small pan and fry the garlic briefly (don’t let it brown),
+        then add the passata and simmer everything until the sauce thickens a little. Leave to cool.
+
+STEP 4
+Once the dough has risen, knead it quickly in the bowl to knock it back,
+        then tip out onto a lightly floured surface and cut into two balls.
+        Roll out each ball into a large teardrop that is very thin and about 25cm across
+        (teardrop shapes fit baking sheets more easily than rounds).
+
+STEP 5
+Heat oven to 240C/220C fan/ gas 9 with a large baking sheet inside.
+        Lift one of the bases onto another floured baking sheet.
+        Smooth the sauce over the base with the back of a spoon, scatter over half the mozzarella,
+        drizzle with olive oil and season. Put the pizza, still on its baking sheet,
+        on top of the hot sheet in the oven and bake for 8-10 mins until crisp. </string>
+    <string name="homemade_ingredients">Ingredients
+300g strong white bread flour , plus extra for dusting
+1 tsp instant yeast
+1 tbsp olive oil
+For the tomato sauce
+1 tbsp olive oil , plus a drizzle
+2 garlic cloves , crushed
+200ml passata
+For the topping
+8 mozzarella pearls , halved
+small bunch fresh basil</string>
+    <string name="sourdough_title">Sourdough pizza</string>
+    <string name="sourdough_description">Make homemade sourdough pizza with a wonderfully chewy crust.
+        Try our margherita recipe, then customise with your favourite toppings</string>
+    <string name="sourdough_ingredients">Ingredients
+For the base
+1 batch white sourdough (see step 1)
+strong or plain flour , for dusting
+For the topping
+2 x 400g cans plum tomatoes
+2 tbsp extra virgin olive oil , plus extra to serve
+1 tsp dried oregano
+300g mozzarella , torn into chunks
+small bunch of basil , leaves picked (optional)</string>
+    <string name="sourdough_method">Method
+STEP 1
+Make a batch of our white sourdough, following the recipe to the end of step 10.
+        When the dough is ready, tip it onto a lightly floured surface and divide into six equal pieces.
+        Roll into balls and leave to rest on a floured tray, covered with a damp teatowel,
+        in the fridge for at least 4 hrs, and up to 18 hrs – the longer you leave the dough, the more sour it will taste.
+
+STEP 2
+Meanwhile, make the tomato sauce. Drain some of the juice from the plummed tomatoes
+        and tip the rest into a bowl with the olive oil, oregano and a generous pinch of salt.
+        Combine by either scrunching everything together with your fingers (this will make a chunky sauce)
+        or blitz with a stick blender (this will make a smooth sauce). Chill until needed.
+
+STEP 3
+To make the pizzas, heat a grill to high and prepare an ovenproof frying pan.
+        On a floured surface, push and stretch a ball of dough into a circle roughly the same size as the pan.
+        Get the pan very hot, then working quickly and carefully, drape it into the pan,
+        spread over some of the sauce, a handful of mozzarella and some basil, if using.
+
+STEP 4
+Cook for 2 mins, until little bubbles appear,
+        then put the pan under the grill for another 2-4 mins until the sides are puffed up and the cheese has melted.
+        Remove, drizzle with a little olive oil and cut into wedges. Repeat with the remaining dough.</string>
+    <string name="no_yeast_title">No yeast pizza dough</string>
+    <string name="no_yeast_description">Try this easy no yeast recipe for pizza dough using just flour, baking powder, salt and oil.</string>
+    <string name="no_yeast_ingredients">Ingredients
+350g plain flour
+2 ¾ tsp baking powder
+1 tsp salt
+1 tbsp oil
+additional toppings of your choice</string>
+    <string name="no_yeast_method">Method
+STEP 1
+Heat the oven to 200C/180C fan/gas 6.
+
+STEP 2
+Mix together 350g flour, 2 ¾ tsp baking powder and 1 tsp salt in a small bowl, add 1 tbsp oil and 170ml water then stir until it forms a ball. If stiff, add more water, it should be soft but not sticky.
+
+STEP 3
+Knead on a floured surface for 3-4 mins. Roll into 2 balls, then flatten out.
+
+STEP 4
+Add toppings and bake each on a baking sheet for 15 mins.</string>
 </resources>

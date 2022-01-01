@@ -2,24 +2,37 @@ package com.example.recyclerview;
 
 public class RecyclerViewItem {
     private int imageResource;
-    private String text1;
-    private String text2;
+    private String title;
+    private String description;
+    private String ingredients;
+    private String method;
 
-    public RecyclerViewItem(int imageResource, String text1, String text2) {
+    public RecyclerViewItem(int imageResource, String title, String description, String ingredients, String method) {
         this.imageResource = imageResource;
-        this.text1 = text1;
-        this.text2 = text2;
+        this.title = title;
+        this.description = description;
+        this.ingredients = ingredients;
+        this.method = method;
     }
 
     public int getImageResource() {
         return imageResource;
     }
 
-    public String getText1() {
-        return text1;
+    public String getTitle() {
+        return title;
     }
 
-    public String getText2() {
-        return text2;
+    public String getDescription() {
+        return description;
     }
+
+    public String getIngredients() {
+        return ingredients;
+    }
+
+    public String getMethod() {
+        return method;
+    }
+
 }
